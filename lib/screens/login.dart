@@ -22,8 +22,8 @@ class _LoginState extends State<Login> {
         elevation: 0,
       ),
       body: Form(
+        key: _formKey,
         child: Padding(
-          key: _formKey,
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: Column(
@@ -68,7 +68,8 @@ class _LoginState extends State<Login> {
                   decoration: const InputDecoration(
                       hintText: "Password",
                       prefixIcon: Icon(Icons.lock),
-                      suffixText: ('Forget')),
+                      suffix: TextButton(onPressed: (){}, child: Text("Forget", style: TextStyle(color: Color.fromARGB(255, 18, 55, 85)),))
+                  ),
                 ),
                 const SizedBox(height: 10),
                 MaterialButton(

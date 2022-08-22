@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_obounce/screens/login.dart';
 
 class Signup extends StatefulWidget {
   
@@ -162,6 +163,32 @@ class _SignupState extends State<Signup> {
                 prefixIcon: Icon(Icons.house),
               ),
             ),
+             MaterialButton(
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => Login(
+                            email: _email.text,
+                            pword: _pword.text,
+                            fname:_fname.text,
+                            cname: _cname.text, 
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                  color: Colors.blue,
+                  height: 50,
+                  minWidth: 360,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: const Text(
+                    "Submit ",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
             
 
           ],
