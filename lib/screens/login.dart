@@ -3,7 +3,7 @@ import 'package:project_obounce/screens/mydashboard.dart';
 import 'package:project_obounce/screens/signup.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({Key? key, required String email, required String pword, required String fname, required String cname}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -65,10 +65,10 @@ class _LoginState extends State<Login> {
                       return null;
                     }
                   },
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                       hintText: "Password",
-                      prefixIcon: Icon(Icons.lock),
-                      suffix: TextButton(onPressed: (){}, child: Text("Forget", style: TextStyle(color: Color.fromARGB(255, 18, 55, 85)),))
+                      prefixIcon: const Icon(Icons.lock),
+                      suffix: TextButton(onPressed: (){}, child: const Text("Forget", style: TextStyle(color: Color.fromARGB(255, 18, 55, 85)),))
                   ),
                 ),
                 const SizedBox(height: 10),
