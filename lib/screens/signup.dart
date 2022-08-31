@@ -28,7 +28,8 @@ class _SignupState extends State<Signup> {
         
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
+            child: SingleChildScrollView(
+              child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -196,6 +197,7 @@ class _SignupState extends State<Signup> {
       
             ],
         ),
+            ),
           )),
       ),
     );
